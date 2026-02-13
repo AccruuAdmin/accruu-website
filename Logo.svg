@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00B37E" />
+      <stop offset="100%" style="stop-color:#00E68A" />
+    </linearGradient>
+    <radialGradient id="bg" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" style="stop-color:#141B24" />
+      <stop offset="100%" style="stop-color:#0D1117" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="800" rx="120" ry="120" fill="url(#bg)"/>
+  <g opacity="0.025"><line x1="200" y1="0" x2="200" y2="800" stroke="#fff"/><line x1="400" y1="0" x2="400" y2="800" stroke="#fff"/><line x1="600" y1="0" x2="600" y2="800" stroke="#fff"/><line x1="0" y1="200" x2="800" y2="200" stroke="#fff"/><line x1="0" y1="400" x2="800" y2="400" stroke="#fff"/><line x1="0" y1="600" x2="800" y2="600" stroke="#fff"/></g>
+
+  <!-- Orbital ring (behind the coin stack) -->
+  <ellipse cx="400" cy="290" rx="130" ry="120" fill="none" stroke="#00E68A" stroke-width="1.5" opacity="0.12" transform="rotate(-15, 400, 290)"/>
+  
+  <!-- Second orbital ring -->
+  <ellipse cx="400" cy="290" rx="130" ry="120" fill="none" stroke="#00E68A" stroke-width="1" opacity="0.06" transform="rotate(25, 400, 290)"/>
+
+  <!-- Orbiting micro-investment dots -->
+  <circle cx="280" cy="215" r="5" fill="#00E68A" opacity="0.6" filter="url(#softglow)"/>
+  <circle cx="525" cy="350" r="4" fill="#00E68A" opacity="0.35"/>
+  <circle cx="310" cy="385" r="3" fill="#00E68A" opacity="0.25"/>
+  <circle cx="505" cy="200" r="3.5" fill="#00E68A" opacity="0.4"/>
+
+  <g transform="translate(400, 290)" filter="url(#glow)">
+    <!-- Coin 1 (bottom) -->
+    <path d="M-60,35 L-60,43 A60,15 0 0,0 60,43 L60,35 A60,15 0 0,1 -60,35 Z" fill="#00E68A" opacity="0.06" stroke="#00E68A" stroke-width="1.5" stroke-opacity="0.15"/>
+    <ellipse cx="0" cy="35" rx="60" ry="15" fill="#111820" stroke="#00E68A" stroke-width="2" opacity="0.25"/>
+
+    <!-- Coin 2 -->
+    <path d="M-60,8 L-60,16 A60,15 0 0,0 60,16 L60,8 A60,15 0 0,1 -60,8 Z" fill="#00E68A" opacity="0.1" stroke="#00E68A" stroke-width="1.5" stroke-opacity="0.3"/>
+    <ellipse cx="0" cy="8" rx="60" ry="15" fill="#121A24" stroke="#00E68A" stroke-width="2.5" opacity="0.5"/>
+
+    <!-- Coin 3 (top) -->
+    <path d="M-60,-19 L-60,-11 A60,15 0 0,0 60,-11 L60,-19 A60,15 0 0,1 -60,-19 Z" fill="#00E68A" opacity="0.15" stroke="#00E68A" stroke-width="2" stroke-opacity="0.5"/>
+    <ellipse cx="0" cy="-19" rx="60" ry="15" fill="#141F2C" stroke="#00E68A" stroke-width="3" opacity="0.85"/>
+    
+    <!-- Dollar on top coin -->
+    <text x="0" y="-12" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue','Arial',sans-serif" font-size="18" font-weight="700" fill="#00E68A" opacity="0.75">$</text>
+  </g>
+
+  <!-- Orbital ring (in front, partial arc to create depth) -->
+  <path d="M330,180 A130,120 -15 0,1 470,175" fill="none" stroke="#00E68A" stroke-width="1.5" opacity="0.1" transform="rotate(-15, 400, 290)"/>
+
+  <text x="400" y="530" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue','Arial',sans-serif" font-size="88" font-weight="800" letter-spacing="12" fill="#FFFFFF">ACCRUU</text>
+  <text x="400" y="580" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue','Arial',sans-serif" font-size="18" font-weight="400" letter-spacing="6" fill="#6B7280">INVEST IN YOURSELF</text>
+  <line x1="320" y1="610" x2="480" y2="610" stroke="url(#g)" stroke-width="2" opacity="0.3"/>
+</svg>
