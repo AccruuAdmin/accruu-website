@@ -73,6 +73,15 @@
       letter-spacing: -0.03em;
       color: var(--green);
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .nav-logo img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
     }
 
     .nav-links {
@@ -158,6 +167,15 @@
       position: relative;
       z-index: 2;
       max-width: 820px;
+    }
+
+    .hero-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 40px rgba(0, 230, 138, 0.2);
+      animation: fadeInUp 0.6s ease-out;
     }
 
     .hero-badge {
@@ -588,7 +606,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="/" class="nav-logo">accruu</a>
+    <a href="/" class="nav-logo"><img src="/logo.svg" alt="Accruu logo">accruu</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#features">Features</a></li>
@@ -606,6 +624,7 @@
   <section class="hero">
     <div class="hero-glow"></div>
     <div class="hero-content">
+      <img src="/logo.svg" alt="Accruu" class="hero-logo">
       <div class="hero-badge">Coming Soon — iOS Beta</div>
       <h1>Turn Your <span class="accent">Screen Time</span> Into Real Wealth</h1>
       <p>Accruu monitors your social media usage and transforms excessive scrolling into automated micro-investments. Build a real portfolio, one intervention at a time.</p>
